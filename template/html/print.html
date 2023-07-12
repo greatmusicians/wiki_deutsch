@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{.Lang}}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ .Title }}</title>
+    
+    <link rel='stylesheet' type='text/css' href='/css/pdf.css' />
+    <link rel='stylesheet' type='text/css' href='/css/gm_danci.css' />
+    <script type="text/javascript" src="/js/gm_danci.js"></script>
+    <link rel='stylesheet' type='text/css' href='/css/gm_wort.css' />
+    <script type="text/javascript" src="/js/gm_wort.js"></script>
+    <link rel='stylesheet' type='text/css' href='/css/gm_qsa.css' />
+    <script type="text/javascript" src="/js/gm_qsa.js"></script>
+
+    <script type='text/javascript'>
+        window.onload = function () {
+            GMDanCi.init(false);
+            GMWort.init(false);
+            GMQSA.init(false);
+            document.getElementById("complete").innerHTML = "complete";
+        }
+    </script>
+
+</head>
+
+<body>
+    {{ .TOC }}
+    {{ .Body }}
+    <div id="complete" style="display: none;">loading</div>
+</body>
+
+</html>
